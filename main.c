@@ -6,6 +6,6 @@
 
 int main() {
     //long double sin1 = pow(MAXFLOAT, 9);
-    printf("%f", sqrt(-1.0));
+    printf("%lf", simple_s21_pow(1, -2));
     return 0;
 }
