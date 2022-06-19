@@ -4,7 +4,10 @@
 /* возвращает значение e, возведенное в заданную степень
  */
 long double s21_exp(double x) {
-    return simple_s21_pow(EXPO, x);
+    if (S21_IS_NAN(x)) return S21_NAN_VAL;
+    if (S21_IS_INF(x) == 1) return S21_HUGE_VAL;
+    if (S21_IS_INF(x) == -1) return 0;
+    return 2;
 }
 
 long double simple_s21_pow(long double x, int exp) {
