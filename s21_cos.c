@@ -1,6 +1,10 @@
 #include "s21_math.h"
 
-/* вычисляет косинус
+/**
+ * @brief 
+ * вычисляет косинус
+ * @param x number (rad)
+ * @return long double 
  */
 long double s21_cos(double x) {
 

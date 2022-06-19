@@ -25,6 +25,7 @@
 #define S21_IS_NAN(x) __builtin_isnan(x)
 
 int s21_abs(int x);
+long double s21_fabs(double x);
 long double s21_exp(double x);
 long double s21_pow(double base, double exp);
 long double s21_sin(double x);

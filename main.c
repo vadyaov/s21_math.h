@@ -5,12 +5,6 @@
 #include "s21_math.h"
 
 int main() {
-    // printf("%.10Lf\n", s21_exp(5));
-    printf("%lf", (int)(5.55555 * 10) % 10);
-    // long double e = 0.0;
-    // for (int i = 0; i < 34; i++) {
-    //     e += (1.0 / s21_factorial(i));
-    //     printf("%.15Lf\n", e);
-    // }
+    printf("%.20lf\n%.20Lf", exp(-2), s21_exp(-2));
     return 0;
 }

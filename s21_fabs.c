@@ -1,6 +1,10 @@
 #include "s21_math.h"
 
-/* вычисляет абсолютное значение числа с плавающей точкой
+/**
+ * @brief 
+ * вычисляет абсолютное значение числа с плавающей точкой
+ * @param x number
+ * @return long double 
  */
 long double s21_fabs(double x) {
     if (S21_IS_NAN(x)) return S21_NAN_VAL;

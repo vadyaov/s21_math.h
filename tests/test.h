@@ -8,6 +8,8 @@
 #include <limits.h>
 
 Suite *s21_Suite_abs();
+Suite *s21_Suite_fabs();
+Suite *s21_Suite_exp();
 
 Suite *s21_Suite_factorial();
 
