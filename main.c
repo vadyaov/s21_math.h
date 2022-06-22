@@ -5,6 +5,6 @@
 #include "s21_math.h"
 
 int main() {
-    printf("%.20lf\n%.20Lf", exp(-2), s21_exp(-2));
+    printf("%.6lf\n%.6Lf", sin(62.830), s21_sin(62.830));
     return 0;
 }

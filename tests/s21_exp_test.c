@@ -2,57 +2,57 @@
 
 START_TEST(s21_exp_test1) {
     double number = 0.0;
-    ck_assert_ldouble_eq(s21_exp(number), (long double)s21_exp(number));
+    ck_assert_ldouble_eq(s21_exp(number), (long double)exp(number));
 } END_TEST
 
 START_TEST(s21_exp_test2) {
     double number = -0.0;
-    ck_assert_ldouble_eq(s21_exp(number), (long double)s21_exp(number));
+    ck_assert_ldouble_eq(s21_exp(number), (long double)exp(number));
 } END_TEST
 
 START_TEST(s21_exp_test3) {
     double number = 1.0;
-    ck_assert_ldouble_eq(s21_exp(number), (long double)s21_exp(number));
+    ck_assert_ldouble_eq(s21_exp(number), (long double)exp(number));
 } END_TEST
 
 START_TEST(s21_exp_test4) {
     double number = 1.1111;
-    ck_assert_ldouble_eq(s21_exp(number), (long double)s21_exp(number));
+    ck_assert_ldouble_eq(s21_exp(number), (long double)exp(number));
 } END_TEST
 
 START_TEST(s21_exp_test5) {
     double number = -1.1111;
-    ck_assert_ldouble_eq(s21_exp(number), (long double)s21_exp(number));
+    ck_assert_ldouble_eq(s21_exp(number), (long double)exp(number));
 } END_TEST
 
 START_TEST(s21_exp_test6) {
     double number = 10;
-    ck_assert_ldouble_eq(s21_exp(number), (long double)s21_exp(number));
+    ck_assert_ldouble_eq(s21_exp(number), (long double)exp(number));
 } END_TEST
 
 START_TEST(s21_exp_test7) {
     double number = -10;
-    ck_assert_ldouble_eq(s21_exp(number), (long double)s21_exp(number));
+    ck_assert_ldouble_eq(s21_exp(number), (long double)exp(number));
 } END_TEST
 
 START_TEST(s21_exp_test8) {
     double number = -1.9999999;
-    ck_assert_ldouble_eq(s21_exp(number), (long double)s21_exp(number));
+    ck_assert_ldouble_eq(s21_exp(number), (long double)exp(number));
 } END_TEST
 
 START_TEST(s21_exp_test9) {
     double number = 1.9999999;
-    ck_assert_ldouble_eq(s21_exp(number), (long double)s21_exp(number));
+    ck_assert_ldouble_eq(s21_exp(number), (long double)exp(number));
 } END_TEST
 
 START_TEST(s21_exp_test10) {
     double number = -0.9999999;
-    ck_assert_ldouble_eq(s21_exp(number), (long double)s21_exp(number));
+    ck_assert_ldouble_eq(s21_exp(number), (long double)exp(number));
 } END_TEST
 
 START_TEST(s21_exp_test11) {
     double number = 0.9999999;
-    ck_assert_ldouble_eq(s21_exp(number), (long double)s21_exp(number));
+    ck_assert_ldouble_eq(s21_exp(number), (long double)exp(number));
 } END_TEST
 
 START_TEST(s21_exp_test12) {
@@ -68,6 +68,11 @@ START_TEST(s21_exp_test13) {
 START_TEST(s21_exp_test14) {
     ck_assert_ldouble_eq(s21_exp(-S21_HUGE_VAL), 0.0);
     ck_assert_ldouble_eq(exp(-S21_HUGE_VAL), 0.0);
+} END_TEST
+
+START_TEST(s21_exp_test15) {
+    double number = 5.5;
+    ck_assert_ldouble_eq(s21_exp(number), (long double)exp(number));
 } END_TEST
 
 Suite *s21_Suite_exp() {
@@ -88,6 +93,7 @@ Suite *s21_Suite_exp() {
     TCase *tc12_s21_exp = tcase_create("test12_s21_exp");
     TCase *tc13_s21_exp = tcase_create("test13_s21_exp");
     TCase *tc14_s21_exp = tcase_create("test14_s21_exp");
+    TCase *tc15_s21_exp = tcase_create("test15_s21_exp");
 
     tcase_add_test(tc1_s21_exp, s21_exp_test1);
     tcase_add_test(tc2_s21_exp, s21_exp_test2);
@@ -103,6 +109,7 @@ Suite *s21_Suite_exp() {
     tcase_add_test(tc12_s21_exp, s21_exp_test12);
     tcase_add_test(tc13_s21_exp, s21_exp_test13);
     tcase_add_test(tc14_s21_exp, s21_exp_test14);
+    tcase_add_test(tc15_s21_exp, s21_exp_test15);
 
     suite_add_tcase(s, tc1_s21_exp);
     suite_add_tcase(s, tc2_s21_exp);
@@ -118,6 +125,7 @@ Suite *s21_Suite_exp() {
     suite_add_tcase(s, tc12_s21_exp);
     suite_add_tcase(s, tc13_s21_exp);
     suite_add_tcase(s, tc14_s21_exp);
+    suite_add_tcase(s, tc15_s21_exp);
 
     return s;
 }
