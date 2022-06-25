@@ -5,6 +5,6 @@
 #include "s21_math.h"
 
 int main() {
-    printf("%.6lf\n%.6Lf", sin(62.830), s21_sin(62.830));
+    printf("%lf\n%Lf", tan(-2 * S21_M_PI / 3), s21_tan(-2 * S21_M_PI / 3));
     return 0;
 }
