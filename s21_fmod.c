@@ -9,14 +9,13 @@
  */
 long double s21_fmod(double x, double y) {
     if (!y) return S21_NAN_VAL;
+    y = s21_fabs(y);
     if (x > 0) {
-        if (__builtin_signbit(y)) y *= -1.0;
         while (x >= y) {
             x -= y;
         }    
     }
     if (x < 0) {
-        if (__builtin_signbit(y)) y *= -1.0;
         while (x <= 0) {
             x += y;
         }
