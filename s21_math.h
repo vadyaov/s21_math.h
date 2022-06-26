@@ -1,6 +1,9 @@
 #ifndef SRC_S21_MATH_H
 #define SRC_S21_MATH_H
 
+
+//#define DBL_MAX ((double)1.79769313486231570814527423731704357e+308L)
+#include <float.h>
 #define EPS 1E-6
 
 #define S21_M_PI 3.14159265358979323846264338327950288
@@ -38,5 +41,7 @@ long double s21_sin(double x);
 long double s21_cos(double x);
 long double s21_tan(double x);
 long double s21_fmod(double x, double y);
+long double s21_floor(double x);
+long double s21_ceil(double x);
 
 #endif  // SRC_S21_MATH_H

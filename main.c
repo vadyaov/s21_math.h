@@ -4,10 +4,10 @@
 #include <limits.h>
 #include "s21_math.h"
 
-#define ARG 0, 0
+#define ARG -12412541251.12512515
 
 int main() {
-    //printf("lib:%lf", fmod(10.41, 10.41));
-    printf("lib:%lf\nmy: %Lf", fmod(ARG), s21_fmod(ARG));
+    //printf("lib:%lf", floor(ARG));
+    printf("lib:%lf\nmy: %Lf", ceil(ARG), s21_ceil(ARG));
     return 0;
 }
