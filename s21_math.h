@@ -33,11 +33,10 @@ long double s21_fabs(double x);
 long double s21_exp(double x);
 long double s21_log(double x);
 long double s21_pow(double base, double exp);
+long double s21_sqrt(double x);
 long double s21_sin(double x);
 long double s21_cos(double x);
 long double s21_tan(double x);
-
-unsigned long long  s21_factorial(unsigned n);
-long double simple_s21_pow(long double x, int exp);
+long double s21_fmod(double x, double y);
 
 #endif  // SRC_S21_MATH_H
