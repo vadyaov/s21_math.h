@@ -1,4 +1,5 @@
 #include "s21_math.h"
+#include <stdio.h>
 
 /**
  * @brief 
@@ -24,7 +25,7 @@ long double s21_pow(double base, double exp) {
     } else if (base > 0) {
         res = s21_exp(exp * s21_log(s21_fabs(base)));
     } else {
-        res = S21_NAN_VAL;
+        res = 0.0L;
     }
     return res;
 }

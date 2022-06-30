@@ -43,5 +43,8 @@ long double s21_tan(double x);
 long double s21_fmod(double x, double y);
 long double s21_floor(double x);
 long double s21_ceil(double x);
+long double s21_asin(double x);
+long double s21_acos(double x);
+long double s21_atan(double x);
 
 #endif  // SRC_S21_MATH_H

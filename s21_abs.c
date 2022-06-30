@@ -6,6 +6,4 @@
  * @param x - number
  * @return int 
  */
-int s21_abs(int x) {
-    return x > 0 ? x : -x;
-}
+int s21_abs(int x) {return x > 0 ? x : -x;}

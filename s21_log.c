@@ -1,5 +1,5 @@
 #include "s21_math.h"
-
+#include <stdio.h>
 /**
  * @brief 
  * вычисляет натуральный логарифм
@@ -19,7 +19,7 @@ long double s21_log(double x) {
         long double sign = 1.0L;
         long double delim = 1.0L;
         long double ch = num;
-        while (ch > 1E-25) { // 0 < x < 2
+        while (s21_fabs(ch) > 1E-25) { // 0 < x < 2
             res += ch / delim * sign;
             ch *= num;
             sign *= -1.0L;
