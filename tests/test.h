@@ -12,6 +12,7 @@ Suite *s21_Suite_fabs();
 Suite *s21_Suite_exp();
 Suite *s21_Suite_log();
 Suite *s21_Suite_pow();
+Suite *s21_Suite_sin();
 
 Suite *s21_Suite_factorial();
 

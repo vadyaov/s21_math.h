@@ -79,6 +79,36 @@ START_TEST(s21_pow_test13) {
     ck_assert_ldouble_nan(res2);
 } END_TEST
 
+START_TEST(s21_pow_test14) {
+    double res1 = pow(S21_HUGE_VAL, -S21_HUGE_VAL);
+    long double res2 = s21_pow(S21_HUGE_VAL, -S21_HUGE_VAL);
+    ck_assert_ldouble_eq_tol(res1, res2, EPS);
+} END_TEST
+
+START_TEST(s21_pow_test15) {
+    double res1 = pow(-12.5, 5);
+    long double res2 = s21_pow(-12.5, 5);
+    ck_assert_ldouble_eq_tol((long double)res1, res2, EPS);
+} END_TEST
+
+START_TEST(s21_pow_test16) {
+    double res1 = pow(-12.5, 6);
+    long double res2 = s21_pow(-12.5, 6);
+    ck_assert_ldouble_eq_tol((long double)res1, res2, EPS);
+} END_TEST
+
+START_TEST(s21_pow_test17) {
+    double res1 = pow(0.0, 6);
+    long double res2 = s21_pow(0.0, 6);
+    ck_assert_ldouble_eq_tol((long double)res1, res2, EPS);
+} END_TEST
+
+START_TEST(s21_pow_test18) {
+    double res1 = pow(S21_HUGE_VAL, -2);
+    long double res2 = s21_pow(S21_HUGE_VAL, -2);
+    ck_assert_ldouble_eq_tol((long double)res1, res2, EPS);
+} END_TEST
+
 Suite *s21_Suite_pow() {
     Suite *s;
     s = suite_create("Pow Unit Test");
@@ -96,6 +126,11 @@ Suite *s21_Suite_pow() {
     TCase *tc11_s21_pow = tcase_create("test11_s21_pow");
     TCase *tc12_s21_pow = tcase_create("test12_s21_pow");
     TCase *tc13_s21_pow = tcase_create("test13_s21_pow");
+    TCase *tc14_s21_pow = tcase_create("test14_s21_pow");
+    TCase *tc15_s21_pow = tcase_create("test15_s21_pow");
+    TCase *tc16_s21_pow = tcase_create("test16_s21_pow");
+    TCase *tc17_s21_pow = tcase_create("test17_s21_pow");
+    TCase *tc18_s21_pow = tcase_create("test18_s21_pow");
 
     tcase_add_test(tc1_s21_pow, s21_pow_test1);
     tcase_add_test(tc2_s21_pow, s21_pow_test2);
@@ -110,6 +145,11 @@ Suite *s21_Suite_pow() {
     tcase_add_test(tc11_s21_pow, s21_pow_test11);
     tcase_add_test(tc12_s21_pow, s21_pow_test12);
     tcase_add_test(tc13_s21_pow, s21_pow_test13);
+    tcase_add_test(tc14_s21_pow, s21_pow_test14);
+    tcase_add_test(tc15_s21_pow, s21_pow_test15);
+    tcase_add_test(tc16_s21_pow, s21_pow_test16);
+    tcase_add_test(tc17_s21_pow, s21_pow_test17);
+    tcase_add_test(tc18_s21_pow, s21_pow_test18);
 
     suite_add_tcase(s, tc1_s21_pow);
     suite_add_tcase(s, tc2_s21_pow);
@@ -124,6 +164,11 @@ Suite *s21_Suite_pow() {
     suite_add_tcase(s, tc11_s21_pow);
     suite_add_tcase(s, tc12_s21_pow);
     suite_add_tcase(s, tc13_s21_pow);
+    suite_add_tcase(s, tc14_s21_pow);
+    suite_add_tcase(s, tc15_s21_pow);
+    suite_add_tcase(s, tc16_s21_pow);
+    suite_add_tcase(s, tc17_s21_pow);
+    suite_add_tcase(s, tc18_s21_pow);
 
   return s;
 }
