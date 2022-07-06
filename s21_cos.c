@@ -9,8 +9,9 @@
 long double s21_cos(double x) {
     if (S21_IS_NAN(x) || S21_IS_INF(x)) return S21_NAN_VAL;
     if (s21_fabs(x) < EPS) return 1.0L;
-    while (x > 2 * S21_M_PI) {
-        x -= 2 * S21_M_PI;
+    while (s21_fabs(x) > 2 * S21_M_PI) {
+        if (x > 0) x -= 2 * S21_M_PI;
+        else x += 2 * S21_M_PI;
     }
     if (s21_fabs(x / S21_M_PI2) == 1.0L) {
         if (x > S21_M_PI2 && x < 3 * S21_M_PI2) return -0.0L;

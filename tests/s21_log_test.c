@@ -24,7 +24,7 @@ START_TEST(s21_log_test4) {
 
 START_TEST(s21_log_test5) {
     double number = 1.0001;
-    ck_assert_ldouble_eq(s21_log(number), (long double)log(number));
+    ck_assert_ldouble_eq_tol(s21_log(number), (long double)log(number), EPS);
 } END_TEST
 
 START_TEST(s21_log_test6) {
@@ -35,32 +35,32 @@ START_TEST(s21_log_test6) {
 
 START_TEST(s21_log_test7) {
     double number = 2;
-    ck_assert_ldouble_eq(s21_log(number), (long double)log(number));
+    ck_assert_ldouble_eq_tol(s21_log(number), (long double)log(number), EPS);
 } END_TEST
 
 START_TEST(s21_log_test8) {
     double number = 1.5;
-    ck_assert_ldouble_eq(s21_log(number), (long double)log(number));
+    ck_assert_ldouble_eq_tol(s21_log(number), (long double)log(number), EPS);
 } END_TEST
 
 START_TEST(s21_log_test9) {
     double number = 15;
-    ck_assert_ldouble_eq(s21_log(number), (long double)log(number));
+    ck_assert_ldouble_eq_tol(s21_log(number), (long double)log(number), EPS);
 } END_TEST
 
 START_TEST(s21_log_test10) {
     double number = 1.9999;
-    ck_assert_ldouble_eq(s21_log(number), (long double)log(number));
+    ck_assert_ldouble_eq_tol(s21_log(number), (long double)log(number), EPS);
 } END_TEST
 
 START_TEST(s21_log_test11) {
     double number = 0.9999;
-    ck_assert_ldouble_eq(s21_log(number), (long double)log(number));
+    ck_assert_ldouble_eq_tol(s21_log(number), (long double)log(number), EPS);
 } END_TEST
 
 START_TEST(s21_log_test12) {
     double number = 100.5;
-    ck_assert_ldouble_eq(s21_log(number), (long double)log(number));
+    ck_assert_ldouble_eq_tol(s21_log(number), (long double)log(number), EPS);
 } END_TEST
 
 Suite *s21_Suite_log() {

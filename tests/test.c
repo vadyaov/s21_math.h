@@ -41,40 +41,33 @@ int main() {
     no_failed1 = srunner_ntests_failed(runner1);
     srunner_free(runner1);
 
-    s2 = s21_Suite_factorial();
+    s2 = s21_Suite_fabs();
     runner2 = srunner_create(s2);
     srunner_set_fork_status(runner2, CK_NOFORK);
     srunner_run_all(runner2, CK_NORMAL);
     no_failed2 = srunner_ntests_failed(runner2);
     srunner_free(runner2);
 
-    s3 = s21_Suite_fabs();
+    s3 = s21_Suite_exp();
     runner3 = srunner_create(s3);
     srunner_set_fork_status(runner3, CK_NOFORK);
     srunner_run_all(runner3, CK_NORMAL);
     no_failed3 = srunner_ntests_failed(runner3);
     srunner_free(runner3);
 
-    s4 = s21_Suite_exp();
+    s4 = s21_Suite_log();
     runner4 = srunner_create(s4);
     srunner_set_fork_status(runner4, CK_NOFORK);
     srunner_run_all(runner4, CK_NORMAL);
     no_failed4 = srunner_ntests_failed(runner4);
     srunner_free(runner4);
 
-    s5 = s21_Suite_log();
+    s5 = s21_Suite_pow();
     runner5 = srunner_create(s5);
     srunner_set_fork_status(runner5, CK_NOFORK);
     srunner_run_all(runner5, CK_NORMAL);
     no_failed5 = srunner_ntests_failed(runner5);
     srunner_free(runner5);
-
-    // s6 = s21_Suite_sprintf();
-    // runner6 = srunner_create(s6);
-    // srunner_set_fork_status(runner6, CK_NOFORK);
-    // srunner_run_all(runner6, CK_NORMAL);
-    // no_failed6 = srunner_ntests_failed(runner6);
-    // srunner_free(runner6);
 
     // s7 = s21_Suite_strcat();
     // runner7 = srunner_create(s7);

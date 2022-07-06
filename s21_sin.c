@@ -9,10 +9,10 @@
 long double s21_sin(double x) {
     if (S21_IS_NAN(x) || S21_IS_INF(x)) return S21_NAN_VAL;
     if (s21_fabs(x) < EPS) return x;
-    while (x > 2 * S21_M_PI) {
-        x -= 2 * S21_M_PI;
+    while (s21_fabs(x) > 2 * S21_M_PI) {
+        if (x > 0) x -= 2 * S21_M_PI;
+        else x += 2 * S21_M_PI;
     }
-    if (s21_fabs((x / (2 * S21_M_PI))) == 1.0L || s21_fabs((x / (S21_M_PI))) == 1.0L) x *= -1.0L;
     long double res = (long double)x;
     long double factor = 1.0L;
     long double ch = res;

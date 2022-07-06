@@ -24,8 +24,10 @@ long double s21_pow(double base, double exp) {
         else res = s21_exp(exp * s21_log(s21_fabs(base)));
     } else if (base > 0) {
         res = s21_exp(exp * s21_log(s21_fabs(base)));
-    } else {
+    } else if (!base){
         res = 0.0L;
+    } else {
+        res = S21_NAN_VAL;
     }
     return res;
 }
