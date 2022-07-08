@@ -7,9 +7,9 @@ int main() {
     int no_failed4 = 0;
     int no_failed5 = 0;
     int no_failed6 = 0;
-    // int no_failed7 = 0;
-    // int no_failed8 = 0;
-    // int no_failed9 = 0;
+    int no_failed7 = 0;
+    int no_failed8 = 0;
+    int no_failed9 = 0;
     // int no_failed10 = 0;
     // int no_failed11 = 0;
     // int no_failed12 = 0;
@@ -26,11 +26,11 @@ int main() {
     // int no_failed23 = 0;
     // int no_failed24 = 0;
     // int no_failed25 = 0;
-    Suite *s1, *s2, *s3, *s4, *s5, *s6/*, *s7, *s8, *s9, *s10, *s11, *s12,
+    Suite *s1, *s2, *s3, *s4, *s5, *s6, *s7, *s8, *s9/*, *s10, *s11, *s12,
                    *s13, *s14, *s15, *s16, *s17, *s18, *s19, *s20, *s21,
                    *s22, *s23, *s24, *s25*/;
-    SRunner *runner1, *runner2, *runner3, *runner4, *runner5, *runner6/*, *runner7, *runner8,
-            *runner9, *runner10, *runner11, *runner12, *runner13, *runner14, *runner15,
+    SRunner *runner1, *runner2, *runner3, *runner4, *runner5, *runner6, *runner7, *runner8,
+            *runner9/*, *runner10, *runner11, *runner12, *runner13, *runner14, *runner15,
             *runner16, *runner17, *runner18, *runner19, *runner20, *runner21, *runner22,
             *runner23, *runner24, *runner25*/;
 
@@ -76,26 +76,26 @@ int main() {
     no_failed6 = srunner_ntests_failed(runner6);
     srunner_free(runner6);
 
-    // s7 = s21_Suite_strcat();
-    // runner7 = srunner_create(s7);
-    // srunner_set_fork_status(runner7, CK_NOFORK);
-    // srunner_run_all(runner7, CK_NORMAL);
-    // no_failed7 = srunner_ntests_failed(runner7);
-    // srunner_free(runner7);
+    s7 = s21_Suite_cos();
+    runner7 = srunner_create(s7);
+    srunner_set_fork_status(runner7, CK_NOFORK);
+    srunner_run_all(runner7, CK_NORMAL);
+    no_failed7 = srunner_ntests_failed(runner7);
+    srunner_free(runner7);
 
-    // s8 = s21_Suite_strchr();
-    // runner8 = srunner_create(s8);
-    // srunner_set_fork_status(runner8, CK_NOFORK);
-    // srunner_run_all(runner8, CK_NORMAL);
-    // no_failed8 = srunner_ntests_failed(runner8);
-    // srunner_free(runner8);
+    s8 = s21_Suite_sqrt();
+    runner8 = srunner_create(s8);
+    srunner_set_fork_status(runner8, CK_NOFORK);
+    srunner_run_all(runner8, CK_NORMAL);
+    no_failed8 = srunner_ntests_failed(runner8);
+    srunner_free(runner8);
 
-    // s9 = s21_Suite_strcmp();
-    // runner9 = srunner_create(s9);
-    // srunner_set_fork_status(runner9, CK_NOFORK);
-    // srunner_run_all(runner9, CK_NORMAL);
-    // no_failed9 = srunner_ntests_failed(runner9);
-    // srunner_free(runner9);
+    s9 = s21_Suite_fmod();
+    runner9 = srunner_create(s9);
+    srunner_set_fork_status(runner9, CK_NOFORK);
+    srunner_run_all(runner9, CK_NORMAL);
+    no_failed9 = srunner_ntests_failed(runner9);
+    srunner_free(runner9);
 
     // s10 = s21_Suite_strcpy();
     // runner10 = srunner_create(s10);
@@ -209,8 +209,8 @@ int main() {
     // no_failed25 = srunner_ntests_failed(runner25);
     // srunner_free(runner25);
 
-    int failures = (!no_failed1 && !no_failed2 && !no_failed3 && !no_failed4 && !no_failed5 && !no_failed6/*
-                    && !no_failed7 && !no_failed8 && !no_failed9 && !no_failed10 && !no_failed11
+    int failures = (!no_failed1 && !no_failed2 && !no_failed3 && !no_failed4 && !no_failed5 && !no_failed6
+                    && !no_failed7 && !no_failed8 && !no_failed9/* && !no_failed10 && !no_failed11
                     && !no_failed12 && !no_failed13 && !no_failed14 && !no_failed15 && !no_failed16
                     && !no_failed17 && !no_failed18 && !no_failed19 && !no_failed20 && !no_failed21
                     && !no_failed22 && !no_failed23 && !no_failed24 && !no_failed25*/) ? 0 : 1;
