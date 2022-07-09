@@ -143,14 +143,14 @@ Suite *s21_Suite_cos() {
     tcase_add_test(tc13_s21_cos, s21_cos_test13);
     tcase_add_test(tc14_s21_cos, s21_cos_test14);
     tcase_add_test(tc15_s21_cos, s21_cos_test15);
-    tcase_add_test(tc16_s21_cos, s21_cos_test15);
-    tcase_add_test(tc17_s21_cos, s21_cos_test15);
-    tcase_add_test(tc18_s21_cos, s21_cos_test15);
-    tcase_add_test(tc19_s21_cos, s21_cos_test15);
-    tcase_add_test(tc20_s21_cos, s21_cos_test15);
-    tcase_add_test(tc21_s21_cos, s21_cos_test15);
-    tcase_add_test(tc22_s21_cos, s21_cos_test15);
-    tcase_add_test(tc23_s21_cos, s21_cos_test15);  
+    tcase_add_test(tc16_s21_cos, s21_cos_test16);
+    tcase_add_test(tc17_s21_cos, s21_cos_test17);
+    tcase_add_test(tc18_s21_cos, s21_cos_test18);
+    tcase_add_test(tc19_s21_cos, s21_cos_test19);
+    tcase_add_test(tc20_s21_cos, s21_cos_test20);
+    tcase_add_test(tc21_s21_cos, s21_cos_test21);
+    tcase_add_test(tc22_s21_cos, s21_cos_test22);
+    tcase_add_test(tc23_s21_cos, s21_cos_test23);
 
     suite_add_tcase(s, tc1_s21_cos);
     suite_add_tcase(s, tc2_s21_cos);

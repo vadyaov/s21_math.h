@@ -119,14 +119,14 @@ Suite *s21_Suite_sin() {
     TCase *tc13_s21_sin = tcase_create("test13_s21_sin");
     TCase *tc14_s21_sin = tcase_create("test14_s21_sin");
     TCase *tc15_s21_sin = tcase_create("test15_s21_sin");
-    TCase *tc16_s21_sin = tcase_create("test15_s21_sin");
-    TCase *tc17_s21_sin = tcase_create("test15_s21_sin");
-    TCase *tc18_s21_sin = tcase_create("test15_s21_sin");
-    TCase *tc19_s21_sin = tcase_create("test15_s21_sin");
-    TCase *tc20_s21_sin = tcase_create("test15_s21_sin");
-    TCase *tc21_s21_sin = tcase_create("test15_s21_sin");
-    TCase *tc22_s21_sin = tcase_create("test15_s21_sin");
-    TCase *tc23_s21_sin = tcase_create("test15_s21_sin");
+    TCase *tc16_s21_sin = tcase_create("test16_s21_sin");
+    TCase *tc17_s21_sin = tcase_create("test17_s21_sin");
+    TCase *tc18_s21_sin = tcase_create("test18_s21_sin");
+    TCase *tc19_s21_sin = tcase_create("test19_s21_sin");
+    TCase *tc20_s21_sin = tcase_create("test20_s21_sin");
+    TCase *tc21_s21_sin = tcase_create("test21_s21_sin");
+    TCase *tc22_s21_sin = tcase_create("test22_s21_sin");
+    TCase *tc23_s21_sin = tcase_create("test23_s21_sin");
 
     tcase_add_test(tc1_s21_sin, s21_sin_test1);
     tcase_add_test(tc2_s21_sin, s21_sin_test2);

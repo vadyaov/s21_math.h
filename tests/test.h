@@ -11,6 +11,7 @@ Suite *s21_Suite_abs();
 Suite *s21_Suite_fabs();
 Suite *s21_Suite_fmod();
 Suite *s21_Suite_floor();
+Suite *s21_Suite_ceil();
 Suite *s21_Suite_exp();
 Suite *s21_Suite_log();
 Suite *s21_Suite_pow();

@@ -4,13 +4,12 @@
 #include <limits.h>
 #include "s21_math.h"
 
-#define ARG MAXFLOAT
+#define ARG - 5 * S21_M_PI2
 
-// tan pi/2 + pi*n not working!!!!!!
-// ceil not working !!!
+//tan pi/2 + pi*n not working!!!!!!
 
 int main() {
     //for (double i = -1.000000; i <= 1.000000; i += 0.0001)
-        printf("lib: %f\tmy:  %02Lf\n", tan(ARG), s21_tan(ARG));
+        printf("lib: %.30f\tmy:  %.30Lf\n", tan(ARG), s21_tan(ARG));
     return 0;
 }

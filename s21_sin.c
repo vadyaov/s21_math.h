@@ -13,6 +13,7 @@ long double s21_sin(double x) {
         if (x > 0) x -= 2 * S21_M_PI;
         else x += 2 * S21_M_PI;
     }
+    if (x >= S21_M_PI2 && x <= S21_M_PI2 + EPS) return 1.0;
     long double res = (long double)x;
     long double factor = 1.0L;
     long double ch = res;
