@@ -10,6 +10,7 @@
  */
 long double s21_pow(double base, double exp) {
     if (!exp) return 1.0L;
+    if (S21_IS_NAN(base) || S21_IS_NAN(exp)) return S21_NAN_VAL;
     if ((S21_IS_INF(base) && __builtin_signbit(exp)) ||
         (!S21_IS_INF(base) && s21_fabs(base) != 1.0L && s21_fabs(base) != 0.0L && S21_IS_INF(exp) == -1))
         return 0.0L;

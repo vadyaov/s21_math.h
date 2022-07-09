@@ -94,7 +94,7 @@ END_TEST
 START_TEST(s21_acos_test_5)
 {
 #line 42
-for (double i = -1.000000; i <= 1.000000; i += 0.00001)
+for (double i = -1.000000; i <= 1.000000; i += 0.0001)
     ck_assert_double_eq_tol(acos(i), s21_acos(i), 1e-6);
 
 }
@@ -136,11 +136,9 @@ START_TEST(s21_acos_test_10)
 {
 #line 58
 ck_assert_double_eq_tol(acos(0.00001), s21_acos(0.00001), 1e-6);
-
-//! s21_asin tests
-
 }
 END_TEST
+//! s21_asin tests
 
 START_TEST(s21_asin_test_1)
 {
@@ -154,7 +152,7 @@ END_TEST
 START_TEST(s21_asin_test_2)
 {
 #line 67
-for (double i = -1.000000; i <= 1.000000; i += 0.00001)
+for (double i = -1.000000; i <= 1.000000; i += 0.0001)
     ck_assert_double_eq_tol(asin(i), s21_asin(i), 1e-6);
 
 }
@@ -247,8 +245,8 @@ END_TEST
 START_TEST(s21_atan_test_3)
 {
 #line 105
-for (double i = -1.000000; i <= 1.000000; i += 0.00001)
-    ck_assert_double_eq_tol(atan(i), s21_atan(i), 1e-7);
+for (double i = -1.000000; i <= 1.000000; i += 0.0001)
+    ck_assert_double_eq_tol(atan(i), s21_atan(i), 1e-6);
 
 }
 END_TEST
@@ -1410,7 +1408,7 @@ END_TEST
 START_TEST(s21_fmod_test_7)
 {
 #line 573
-ck_assert_double_eq(fmod(-1, -INFINITY), s21_fmod(-1, -S21_HUGE_VAL));
+ck_assert_double_eq(fmod(-1, -S21_HUGE_VAL), s21_fmod(-1, -S21_HUGE_VAL));
 
 }
 END_TEST
@@ -1418,7 +1416,7 @@ END_TEST
 START_TEST(s21_fmod_test_8)
 {
 #line 576
-ck_assert_double_eq(fmod(0, INFINITY), s21_fmod(0, S21_HUGE_VAL));
+ck_assert_double_eq(fmod(0, S21_HUGE_VAL), s21_fmod(0, S21_HUGE_VAL));
 
 }
 END_TEST

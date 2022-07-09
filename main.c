@@ -4,12 +4,13 @@
 #include <limits.h>
 #include "s21_math.h"
 
-#define ARG 8.0
+#define ARG 1
 
 // tan pi/2 + pi*n not working!!!!!!
 // ceil not working !!!
 
 int main() {
-    printf("lib: %f\nmy:  %02Lf", ceil(ARG), s21_ceil(ARG));
+    //for (double i = -1.000000; i <= 1.000000; i += 0.0001)
+        printf("lib: %f\tmy:  %02Lf\n", atan(ARG), s21_atan(ARG));
     return 0;
 }
