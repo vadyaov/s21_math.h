@@ -1,19 +1,19 @@
 #include "test.h"
 
 START_TEST(s21_sqrt_test1) {
-    ck_assert_double_eq_tol(sqrt(1234567891234567), s21_sqrt(1234567891234567), EPS);
+    ck_assert_ldouble_eq_tol(sqrt(1234567891234567), s21_sqrt(1234567891234567), EPS);
 } END_TEST
 
 START_TEST(s21_sqrt_test2) {
-    ck_assert_double_eq_tol(sqrt(0.0), s21_sqrt(0.0), EPS);
+    ck_assert_ldouble_eq_tol(sqrt(0.0), s21_sqrt(0.0), EPS);
 } END_TEST
 
 START_TEST(s21_sqrt_test3) {
-    ck_assert_double_eq_tol(sqrt(0.01), s21_sqrt(0.01), EPS);
+    ck_assert_ldouble_eq_tol(sqrt(0.01), s21_sqrt(0.01), EPS);
 } END_TEST
 
 START_TEST(s21_sqrt_test4) {
-    ck_assert_double_eq_tol(sqrt(0.00001), s21_sqrt(0.00001), EPS);
+    ck_assert_ldouble_eq_tol(sqrt(0.00001), s21_sqrt(0.00001), EPS);
 } END_TEST
 
 START_TEST(s21_sqrt_test5) {
@@ -25,23 +25,23 @@ START_TEST(s21_sqrt_test6) {
 } END_TEST
 
 START_TEST(s21_sqrt_test7) {
-    ck_assert_double_eq_tol(sqrt(2), s21_sqrt(2), EPS);
+    ck_assert_ldouble_eq_tol(sqrt(2), s21_sqrt(2), EPS);
 } END_TEST
 
 START_TEST(s21_sqrt_test8) {
-    ck_assert_double_eq_tol(sqrt(121), s21_sqrt(121), EPS);
+    ck_assert_ldouble_eq_tol(sqrt(121), s21_sqrt(121), EPS);
 } END_TEST
 
 START_TEST(s21_sqrt_test9) {
-    ck_assert_double_eq_tol(sqrt(1244.12414), s21_sqrt(1244.12414), EPS);
+    ck_assert_ldouble_eq_tol(sqrt(1244.12414), s21_sqrt(1244.12414), EPS);
 } END_TEST
 
 START_TEST(s21_sqrt_test10) {
-    ck_assert_double_eq_tol(sqrt(1.21), s21_sqrt(1.21), EPS);
+    ck_assert_ldouble_eq_tol(sqrt(1.21), s21_sqrt(1.21), EPS);
 } END_TEST
 
 START_TEST(s21_sqrt_test11) {
-    ck_assert_double_eq_tol(sqrt(0.999998), s21_sqrt(0.999998), EPS);
+    ck_assert_ldouble_eq_tol(sqrt(0.999998), s21_sqrt(0.999998), EPS);
 } END_TEST
 
 Suite *s21_Suite_sqrt() {
@@ -84,5 +84,5 @@ Suite *s21_Suite_sqrt() {
     suite_add_tcase(s, tc10_s21_sqrt);
     suite_add_tcase(s, tc11_s21_sqrt);
 
-  return s;
+    return s;
 }

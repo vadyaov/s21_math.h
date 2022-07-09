@@ -131,5 +131,5 @@ Suite *s21_Suite_abs() {
     suite_add_tcase(s, tc15_s21_abs);
     suite_add_tcase(s, tc16_s21_abs);
 
-  return s;
+    return s;
 }
