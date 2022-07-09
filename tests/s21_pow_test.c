@@ -126,7 +126,7 @@ START_TEST(s21_pow_test22) {
 } END_TEST
 
 START_TEST(s21_pow_test23) {
-    ck_assert_double_eq(pow(-1, 4), s21_pow(-1, 4));
+    ck_assert_double_eq(pow(-INFINITY, 3), s21_pow(-S21_HUGE_VAL, 3));
 } END_TEST
 
 START_TEST(s21_pow_test24) {
@@ -198,7 +198,17 @@ START_TEST(s21_pow_test40) {
 } END_TEST
 
 START_TEST(s21_pow_test41) {
-    ck_assert_double_eq(pow(-1, -S21_HUGE_VAL), s21_pow(-1, -S21_HUGE_VAL));
+    ck_assert_double_eq_tol(pow(-1, -S21_HUGE_VAL), s21_pow(-1, -S21_HUGE_VAL), EPS);
+} END_TEST
+
+START_TEST(s21_pow_test42) {
+    ck_assert_double_eq_tol(pow(0, S21_HUGE_VAL), s21_pow(0, S21_HUGE_VAL), EPS);
+} END_TEST
+
+START_TEST(s21_pow_test43) {
+    double res1 = pow(-S21_HUGE_VAL, -2);
+    long double res2 = s21_pow(-S21_HUGE_VAL, -2);
+    ck_assert_ldouble_eq_tol((long double)res1, res2, EPS);
 } END_TEST
 
 Suite *s21_Suite_pow() {
@@ -246,6 +256,8 @@ Suite *s21_Suite_pow() {
     TCase *tc39_s21_pow = tcase_create("test39_s21_pow");
     TCase *tc40_s21_pow = tcase_create("test40_s21_pow");
     TCase *tc41_s21_pow = tcase_create("test41_s21_pow");
+    TCase *tc42_s21_pow = tcase_create("test42_s21_pow");
+    TCase *tc43_s21_pow = tcase_create("test43_s21_pow");
 
     tcase_add_test(tc1_s21_pow, s21_pow_test1);
     tcase_add_test(tc2_s21_pow, s21_pow_test2);
@@ -288,6 +300,8 @@ Suite *s21_Suite_pow() {
     tcase_add_test(tc39_s21_pow, s21_pow_test39);
     tcase_add_test(tc40_s21_pow, s21_pow_test40);
     tcase_add_test(tc41_s21_pow, s21_pow_test41);
+    tcase_add_test(tc42_s21_pow, s21_pow_test42);
+    tcase_add_test(tc43_s21_pow, s21_pow_test43);
 
     suite_add_tcase(s, tc1_s21_pow);
     suite_add_tcase(s, tc2_s21_pow);
@@ -330,6 +344,8 @@ Suite *s21_Suite_pow() {
     suite_add_tcase(s, tc39_s21_pow);
     suite_add_tcase(s, tc40_s21_pow);
     suite_add_tcase(s, tc41_s21_pow);
+    suite_add_tcase(s, tc42_s21_pow);
+    suite_add_tcase(s, tc43_s21_pow);
 
     return s;
 }

@@ -25,7 +25,7 @@ START_TEST(s21_fmod_test6) {
 } END_TEST
 
 START_TEST(s21_fmod_test7) {
-    ck_assert_ldouble_eq_tol(fmod(2, 1.111), s21_fmod(2, 1.111), EPS);
+    ck_assert_ldouble_eq_tol(fmod(-1, S21_HUGE_VAL), s21_fmod(-1, S21_HUGE_VAL), EPS);
 } END_TEST
 
 START_TEST(s21_fmod_test8) {

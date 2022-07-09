@@ -13,10 +13,10 @@ long double s21_cos(double x) {
         if (x > 0) x -= 2 * S21_M_PI;
         else x += 2 * S21_M_PI;
     }
-    if (s21_fabs(x / S21_M_PI2) == 1.0L) {
-        if (x > S21_M_PI2 && x < 3 * S21_M_PI2) return -0.0L;
-        else return 0.0L;
-    }
+    // if (s21_fabs(x / S21_M_PI2) == 1.0L) {
+    //     if (x > S21_M_PI2 && x < 3 * S21_M_PI2) return -0.0L;
+    //     else return 0.0L;
+    // }
     long double res = 1.0L;
     long double ch = 1.0L;
     int i = 1;

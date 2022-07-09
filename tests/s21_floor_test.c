@@ -29,7 +29,7 @@ START_TEST(s21_floor_test7) {
 } END_TEST
 
 START_TEST(s21_floor_test8) {
-    ck_assert_double_eq(floor(10009.00123), s21_floor(10009.00123));
+    ck_assert_double_eq(floor(MAXFLOAT), s21_floor(MAXFLOAT));
 } END_TEST
 
 START_TEST(s21_floor_test9) {

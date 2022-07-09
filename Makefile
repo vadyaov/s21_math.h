@@ -1,5 +1,5 @@
 CC	=	gcc
-FLAGS	=	-Wall	-Werror	-Wextra	-std=c11	-pedantic	-fanalyzer	#-g	-fsanitize=address
+FLAGS	=	-Wall	-Werror	-Wextra	-std=c11	-pedantic	-fanalyzer	#-fsanitize=address	-g
 LFLAGS	=	-lcheck	-lm	-lpthread
 RFLAGS	=	-fprofile-arcs	-ftest-coverage
 TDIR	=	tests

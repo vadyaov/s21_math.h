@@ -18,7 +18,6 @@ START_TEST(s21_asin_test3) {
 
 START_TEST(s21_asin_test4) {
     ck_assert_ldouble_eq_tol(asin(1), s21_asin(1), 1e-7);
-
 } END_TEST
 
 START_TEST(s21_asin_test5) {
@@ -35,15 +34,23 @@ START_TEST(s21_asin_test7) {
 } END_TEST
 
 START_TEST(s21_asin_test8) {
-    ck_assert_ldouble_nan(s21_asin(S21_HUGE_VAL));
+    ck_assert_ldouble_nan(s21_asin(INFINITY));
 } END_TEST
 
 START_TEST(s21_asin_test9) {
-    ck_assert_ldouble_nan(s21_asin(-1.0/0.0));
+    ck_assert_ldouble_nan(s21_asin(-INFINITY));
 } END_TEST
 
 START_TEST(s21_asin_test10) {
     ck_assert_ldouble_nan(s21_asin(-252.568));
+} END_TEST
+
+START_TEST(s21_asin_test11) {
+    ck_assert_ldouble_nan(s21_asin(555));
+} END_TEST
+
+START_TEST(s21_asin_test12) {
+    ck_assert_ldouble_nan(s21_asin(sqrt(-1)));
 } END_TEST
 
 Suite *s21_Suite_asin() {
@@ -60,6 +67,8 @@ Suite *s21_Suite_asin() {
     TCase *tc8_s21_asin = tcase_create("test8_s21_asin");
     TCase *tc9_s21_asin = tcase_create("test9_s21_asin");
     TCase *tc10_s21_asin = tcase_create("test10_s21_asin");
+    TCase *tc11_s21_asin = tcase_create("test11_s21_asin");
+    TCase *tc12_s21_asin = tcase_create("test12_s21_asin");
 
     tcase_add_test(tc1_s21_asin, s21_asin_test1);
     tcase_add_test(tc2_s21_asin, s21_asin_test2);
@@ -71,6 +80,8 @@ Suite *s21_Suite_asin() {
     tcase_add_test(tc8_s21_asin, s21_asin_test8);
     tcase_add_test(tc9_s21_asin, s21_asin_test9);
     tcase_add_test(tc10_s21_asin, s21_asin_test10);
+    tcase_add_test(tc11_s21_asin, s21_asin_test11);
+    tcase_add_test(tc12_s21_asin, s21_asin_test12);
 
     suite_add_tcase(s, tc1_s21_asin);
     suite_add_tcase(s, tc2_s21_asin);
@@ -82,6 +93,8 @@ Suite *s21_Suite_asin() {
     suite_add_tcase(s, tc8_s21_asin);
     suite_add_tcase(s, tc9_s21_asin);
     suite_add_tcase(s, tc10_s21_asin);
+    suite_add_tcase(s, tc11_s21_asin);
+    suite_add_tcase(s, tc12_s21_asin);
 
     return s;
 }

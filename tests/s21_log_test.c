@@ -49,7 +49,7 @@ START_TEST(s21_log_test9) {
 } END_TEST
 
 START_TEST(s21_log_test10) {
-    double number = 1.9999;
+    double number = S21_ME + 1e-16;
     ck_assert_ldouble_eq_tol(s21_log(number), (long double)log(number), EPS);
 } END_TEST
 

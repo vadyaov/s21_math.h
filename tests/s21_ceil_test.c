@@ -34,7 +34,7 @@ START_TEST(s21_ceil_test8) {
 } END_TEST
 
 START_TEST(s21_ceil_test9) {
-    ck_assert_double_eq(ceil(10009.00123), s21_ceil(10009.00123));
+    ck_assert_double_eq(ceil(MAXFLOAT), s21_ceil(MAXFLOAT));
 } END_TEST
 
 START_TEST(s21_ceil_test10) {
@@ -58,7 +58,7 @@ START_TEST(s21_ceil_test14) {
 } END_TEST
 
 START_TEST(s21_ceil_test15) {
-    ck_assert_double_eq(ceil(0.0), s21_ceil(0.0));
+    ck_assert_double_eq(ceil(-0.0), s21_ceil(-0.0));
 } END_TEST
 
 Suite *s21_Suite_ceil() {

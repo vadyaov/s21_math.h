@@ -104,7 +104,7 @@ START_TEST(s21_exp_test22) {
 } END_TEST
 
 START_TEST(s21_exp_test23) {
-    ck_assert_double_eq_tol(exp(1), s21_exp(1), EPS);
+    ck_assert_double_eq_tol(exp(-45.11), s21_exp(-45.11), EPS);
 } END_TEST
 
 START_TEST(s21_exp_test24) {
